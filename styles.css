@@ -41,6 +41,67 @@ body{
 .banner-right img{
     display: block;
 }
+/* match */
+.match{
+    display: flex;
+    gap:3rem;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.match-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 312px;
+    height: 312px;
+    background-color: black;
+    padding: 30px 30px;
+    border: none;
+    border-radius: 10px;
+}
+.match-left button{
+    height: 65px;
+    font-size: 20px;
+}
+.bg-white{
+    background-color: white;
+    color: black;
+}
+.match-right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px 50px;
+    flex: 1;
+}
+.matches{
+    /* max-width: 312px; */
+    box-shadow: 1px  0px 20px  rgb(163, 159, 159);
+    border-radius: 10px;
+    border: none;
+}
+.matches-inside{
+    padding: 20px;
+}
+.matches img{
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+}
+.matches button{
+    padding: 12px 23px;
+}
+.match-des{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.icons{
+    display: flex;
+    gap:30px
+}
+
+
 
 /* responsive design */
 @media screen and (max-width:575px) {
@@ -49,7 +110,7 @@ body{
         justify-content: center;
         align-content: center;
         align-items: center;
-        margin: 0 10px;
+        margin: 10px 10px;
         padding: 10px 40px 0px 20px;
     }
     .banner-left{
@@ -73,6 +134,23 @@ body{
         padding-left: 20px;
         
     }
+    /* match */
+    .match{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .match-left{
+        background-color: white;
+    }
+    .match-left button{
+        box-shadow: 1px 0 10px 1px rgb(197, 178, 178);
+        border: none;
+    }
+    .match-right{
+        grid-template-columns: repeat(1,1fr);
+        padding: 0 20px;
+    }
 }
 @media screen and (min-width:576px) and (max-width:992px){
     body{
@@ -95,6 +173,27 @@ body{
     }
     .banner-right img{
         width: 100%;
+    }
+    /* matches */
+    .match{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .match-left{
+        flex-direction: row;
+        background-color: white;
+        height: 30px;
+        width: auto;
+        justify-content: space-between;
+    }
+    .match-left button{
+        width: 220px;
+                box-shadow: 1px 0 10px 1px rgb(197, 178, 178);
+
+    }
+    .match-right{
+        grid-template-columns: repeat(2, 1fr);
     }
     
 }
